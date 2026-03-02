@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Students</fullName>
+    <columns>NAME</columns>
+    <columns>Departmeent__c</columns>
+    <columns>CSC_Fee__c</columns>
+    <columns>Dental_Fee__c</columns>
+    <columns>EEE_Fee__c</columns>
+    <columns>grades__c</columns>
+    <columns>marks__c</columns>
+    <columns>Pharmacy_Fee__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <label>My Students</label>
+    <language>en_US</language>
+</ListView>

@@ -4,7 +4,7 @@ if(prefs.bypass_triggers__c == true)
 {
 return;
 }
-
+//testing
     list<Contact> contactlist=[select  id,Level__c ,accountid from contact where Level__c='Secondary' and id in :trigger.new  ] ;
 set<id> accountid = new set<id>();
 list<account>updatelist=new list<account>();

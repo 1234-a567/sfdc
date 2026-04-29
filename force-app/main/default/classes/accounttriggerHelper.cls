@@ -2,8 +2,20 @@ Public class accounttriggerHelper {
 public static boolean isrecurcive = false;
     // returns the contactlist associated to accounts
     public static list < contact > getcontacts(list < account > accountlist) {
-        list < contact > contactlist = [select id, name from contact where accountid in: accountlist];
-        return contactlist;
+        list <contact> contactlist = new list <contact> ();
+        for(account acc : accountlist){
+        contactlist = [select id, name from contact where accountid = :acc.id];
+        if(!contactlist.isempty())
+        {
+        list <contact> querycontacts = [select id,name from contact where id in: contactlist];
+        }
+        else{
+        list<opportunity> optylist = [select id,name from opportunity limit 2];
+        }
+        
+       
+        }
+         return contactlist;
     }
     // raise a error message while delete the oktodelete accounts
     public static void deleteOKdeletContacs(list < account > accountlist) {

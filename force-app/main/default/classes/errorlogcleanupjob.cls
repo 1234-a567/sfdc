@@ -4,11 +4,9 @@ global class errorlogcleanupjob implements Database.Batchable<sObject> {
     global Database.QueryLocator start(Database.BatchableContext bc) {
     date todaydate = Date.today();
 system.debug('todaydate:::'+todaydate);
-date olddate = todaydate.adddays(-18);
-system.debug('pastdate:::'+todaydate.adddays(-20));
-//list<Error_Log__c> errorrrecods = [select id,Component_Name__c,Error_Message__c from Error_Log__c where CreatedDate <= :olddate];
-//system.debug('errorrrecods:::'+errorrrecods);
-
+CleanUp_Batch_Days__c CleanUpRecord = CleanUp_Batch_Days__c.getValues('errorlogcleanupjob');
+Integer numOfDays = cleanUpRecord.cleanup_Days__c.intValue();
+Date oldDate = todayDate.addDays(numOfDays);
         return Database.getQueryLocator('select id,Component_Name__c,Error_Message__c from Error_Log__c where CreatedDate <= :olddate');
     }
 

@@ -1,10 +1,10 @@
 public class updateintereststustusinopportunity {
-    public updateintereststustusinopportunity() {
+    /* public updateintereststustusinopportunity() {
         updateopportunity();
-    }
+    }*/
     
 
-    private void updateopportunity() {
+    public void updateopportunity() {
         set < id > optyidset = new set < id > ();
         set < id > optyidsetnotinterest = new set < id > ();
         list < position__c > positionlist = new list < position__c > ();
@@ -76,7 +76,7 @@ public class updateintereststustusinopportunity {
         monthnamevsnumber.put('Sep', '9');
         monthnamevsnumber.put('Oct', '10');
         monthnamevsnumber.put('Nov', '11');
-        monthnamevsnumber.put('Dev', '12');
+        monthnamevsnumber.put('Dec', '12');
         return monthnamevsnumber;
 
     }

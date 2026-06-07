@@ -55,6 +55,21 @@
                 <default>false</default>
                 <label>hyderabad</label>
             </value>
+            <value>
+                <fullName>salem</fullName>
+                <default>false</default>
+                <label>salem</label>
+            </value>
+            <value>
+                <fullName>chennai</fullName>
+                <default>false</default>
+                <label>chennai</label>
+            </value>
+            <value>
+                <fullName>tiruvanamalai</fullName>
+                <default>false</default>
+                <label>tiruvanamalai</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

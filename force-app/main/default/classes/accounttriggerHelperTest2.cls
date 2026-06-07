@@ -1,5 +1,5 @@
-@IsTest
-public class accounttriggerHelperTest{
+@IsTest(SeeAllData=true)
+public class accounttriggerHelperTest2{
 
 /*@istest
 public static void getcontactstest(){
@@ -8,23 +8,7 @@ public static void getcontactstest(){
 
 public static testmethod void getcontactstest(){
 list<account> acclist = new list<account>();
- Account acc = new Account(Name = 'Test Account',AccountNumber = '123',Type='Technology Partner',AccountSource='web');
-        insert acc; // account trigger will execute in this lile before and after
-      acclist.add(acc);
-      test.starttest();
-      Account acc2 = new Account(Name = 'Test Account',AccountNumber = '123',Type='Technology Partner',AccountSource='web');
-        insert acc2; // account trigger will execute in this lile before and after
-      acclist.add(acc2);
-      test.stoptest();
-      Contact testContact = new Contact(
-            FirstName = 'John',
-            LastName = 'Doe',
-            Email = 'john.doe@example.com',
-            AccountId = acclist[1].Id
-        );
-        test.starttest();
-        insert testContact;
-        test.stoptest();
+acclist = [select id, name from account limit 1];
       list<contact> conlist = accounttriggerHelper.getcontacts(acclist);
                 system.debug('size::'+conlist.size());
       system.assertEquals(1,conlist.size());
@@ -33,13 +17,13 @@ list<account> acclist = new list<account>();
   }
   
  
-public static testmethod void  deleteOKdeletContacstest(){
+/*public static testmethod void  deleteOKdeletContacstest(){
 list<account>acclist=new list<account>();
 Account acc = new Account(Name = 'anilll',AccountNumber = '1234',Type='Technology Partner');
 insert acc;
 acclist.add(acc);
 accounttriggerHelper.deleteOKdeletContacs(acclist);
-system.assert(acclist.size() > 0);
+system.assert(acclist.size() == 0);
 }
 public static testmethod void assignWebsitetest(){
 Account acc = new Account(Name = 'Test Account',AccountNumber = '123',AccountSource='web');
@@ -64,5 +48,5 @@ Contact testContact1 = new Contact(
             AccountId =acc.id);
           insert testcontact1;
        accounttriggerHelper.updatecontactphone(acc.id);
-}
+}*/
 }

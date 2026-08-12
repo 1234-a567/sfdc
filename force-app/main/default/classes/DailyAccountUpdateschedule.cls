@@ -22,5 +22,5 @@ global class DailyAccountUpdateschedule implements Schedulable {
         // execute quauable job
         system.enqueuejob(new UpdateAccountQueueable());
     }
-/*this is modified file */
+
 }

@@ -12,11 +12,9 @@ acclist = [select id, name from account limit 1];
       list<contact> conlist = accounttriggerHelper.getcontacts(acclist);
                 system.debug('size::'+conlist.size());
       system.assertEquals(1,conlist.size());
-      
-     
   }
   
- 
+}
 /*public static testmethod void  deleteOKdeletContacstest(){
 list<account>acclist=new list<account>();
 Account acc = new Account(Name = 'anilll',AccountNumber = '1234',Type='Technology Partner');
@@ -49,4 +47,3 @@ Contact testContact1 = new Contact(
           insert testcontact1;
        accounttriggerHelper.updatecontactphone(acc.id);
 }*/
-}
